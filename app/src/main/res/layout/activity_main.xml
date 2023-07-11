@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F8FF"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textview_information_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/millard_bold"
+        android:text="Live Sensor Readings"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textview_temperature_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="Temperature"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toStartOf="@+id/textview_activationstate_header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_information_header"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <TextView
+        android:id="@+id/textview_temperature_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/lato"
+        android:text="0°F"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="@+id/textview_temperature_header"
+        app:layout_constraintStart_toStartOf="@+id/textview_temperature_header"
+        app:layout_constraintTop_toBottomOf="@+id/textview_temperature_header" />
+
+    <TextView
+        android:id="@+id/textview_activationstate_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="Seat Activation"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textview_temperature_header"
+        app:layout_constraintTop_toBottomOf="@+id/textview_information_header" />
+
+    <!--
+    <Button
+        android:id="@+id/button_start_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Service"
+        android:onClick="startService"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_activationstate_text" />
+-->
+    <TextView
+        android:id="@+id/textview_activationstate_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/lato"
+        android:text="DEACTIVATED"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="@+id/textview_activationstate_header"
+        app:layout_constraintStart_toStartOf="@+id/textview_activationstate_header"
+        app:layout_constraintTop_toBottomOf="@+id/textview_activationstate_header" />
+
+    <Button
+        android:id="@+id/button_stop_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:onClick="stopService"
+        android:text="stop service"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_activationstate_text" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_stop_service"
+        app:srcCompat="@drawable/untitled_artwork_" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
